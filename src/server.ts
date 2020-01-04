@@ -4,7 +4,7 @@ import path from 'path'
 import { promises as fs } from 'fs'
 import os from 'os'
 
-const port = 3000
+const port = parseInt(process.env.PORT || '3000')
 const indexPage = fs.readFile(path.join(__dirname, 'index.html'))
 const clientScript = fs.readFile(path.join(__dirname, 'client.js'))
 const netInterfaces = os.networkInterfaces()
@@ -34,4 +34,4 @@ server.on('listening', () => {
 	}
 })
 
-server.listen(3000)
+server.listen(port)
