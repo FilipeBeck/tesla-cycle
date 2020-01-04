@@ -1,7 +1,7 @@
 {
   "name": "tesla-cycle",
   "version": "0.0.1",
-  "main": "server.js",
+  "main": "app/server.js",
   "author": "Filipe Roberto Beck",
   "license": "MIT",
   "scripts": {
@@ -10,7 +10,8 @@
     "compile": "tsc && yarn webpack",
     "copy-assets": "cp src/index.html app",
     "build": "yarn clear-console && yarn clear-output && yarn compile && yarn copy-assets",
-    "start": "node ./app/server.js"
+    "start": "node ./app/server.js",
+    "postinstall": "yarn build"
   },
   "dependencies": {
     "react": "^16.12.0",
