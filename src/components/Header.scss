@@ -1,0 +1,53 @@
+%flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.Header {
+	@extend %flex;
+	height: 50px;
+	padding: 0 20px;
+	background-color: #0F3C78;
+	color: white;
+	& > h1 {
+		font-size: 26px;
+		font-weight: bold;;
+		text-shadow: 0 0 5px #3F9388;
+	}
+	& > form {
+		@extend %flex;
+		justify-content: end;
+		& > .fields {
+			display: grid;
+			grid-template-columns: auto auto;
+			grid-column-gap: 50px;
+			& > * {
+				& > span {
+					font-size: 20px;
+					font-weight: bold;
+				}
+				& > input {
+					width: 50px;
+					height: 30px;
+					margin-left: 20px;
+					padding-left: 10px;
+					font-size: 20px;
+					border: solid 1px #E8E8E8;
+					border-radius: 3px;
+				}
+			}
+		}
+		& > button {
+			display: none;
+			align-items: center;
+			margin-left: 50px;
+			padding: 0;
+			background: none;
+			border: none;
+			& > img {
+				height: 30px;
+			}
+		}
+	}
+}
